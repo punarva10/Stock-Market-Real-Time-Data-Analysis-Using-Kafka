@@ -45,8 +45,8 @@
 ```
 10. Terminal 2: Start Kafka server <br />
 ```
-   i. export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M" <br />
-   ii. bin/kafka-server-start.sh config/server.properties <br />
+   i. export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+   ii. bin/kafka-server-start.sh config/server.properties
 ```
    If starting this server gives an error, <br />
 ```
@@ -60,7 +60,7 @@
 ```
 12. Terminal 4: Start consumer <br />
 ```
-   i. bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server {Public Ipv4 Addr}:9092
+   i. bin/kafka-console-consumer.sh --topic {topic_name} --bootstrap-server {Public Ipv4 Addr}:9092
 ```
 
 13. Open new terminal and start jupyter notebook
