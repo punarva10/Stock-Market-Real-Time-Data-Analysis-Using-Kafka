@@ -31,12 +31,14 @@
 ```
    i. sudo nano config/server.properties
 ```
-   ii. Uncomment advertised.listeners and change ip address to the public ip address of the instance (can be found in AWS under {instance_name} -> Public IPV4 Address) 
+   ii. Uncomment advertised.listeners and change ip address to the public ip address of the instance <br />
+   (can be found in AWS under {instance_name} -> Public IPV4 Address) 
 ```
    advertised.listeners=PLAINTEXT://{public_ip}:9092
 ```
 8. Change the security of the EC2 instance by adding an inbound rule to listen to our local machine <br />
-    i. In AWS, go to {instance_name} -> Security -> security groups link -> Edit Inbound rules -> Add rule : Type = All traffic, Source = Anywhere - IPV4
+    i. In AWS, go to {instance_name} -> Security -> security groups link -> Edit Inbound rules -> <br />
+    Add rule : Type = All traffic, Source = Anywhere - IPV4
 9. Terminal 1: Start Zoo-keeper <br />
 ```
    i. bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -60,4 +62,11 @@
 ```
    i. bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server {Public Ipv4 Addr}:9092
 ```
+
+13. Open new terminal and start jupyter notebook
+```
+jupyter notebook
+```
+14. Start 2 new python notebooks and name them "KafkaProducer" and "KafkaConsumer"
+15. 
    
