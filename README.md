@@ -5,7 +5,7 @@
 
 
 ## Steps to run:
-1. Start an EC2 instance, create a new key pair, and download the pem key into a folder
+1. Start an EC2 instance, create a new key pair, and download the pem key into a folder.
 2. Open 4 terminals and navigate into that folder in all 4.
 3. ssh into the EC2 instance in all 4 terminals (Command found in AWS under {instance_name} -> SSH Client -> Connect ) <br />
 ```
